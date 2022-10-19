@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Bootstrap</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <style>
+
+body {
+    background-image: url(./images/ceu.jpg);
+}
+
+.body-mask {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item img {
+            max-height: 500px;
+    }
+
+        ul.item-anuncio {
+            padding-left: 0;
+    }
+
+        section h1 {
+            padding: 12px 12px 12px 0;
+            color: #fff;
+    }
+
+        .container {
+            height: 100%;
+    }
+
+        .item-anuncio li {
+            list-style: none;
+    }
+
+        .item-anuncio li img {
+            height: 220px;
+    }
+
+        #rodape {
+            width: 100%;
+            padding: 14px 0;
+            background-color: black;
+            color: #fff;
+            position: static;
+            bottom: 0;
+    }
+
+        @media screen and (min-width: 1024px) {
+        .item-anuncio {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 32%);
+            column-gap: 2%;
+            row-gap: 18px;
+        }
+    }       
+
+        @media screen and (max-width: 767px) {
+        .item-anuncio {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1, 100%);
+            column-gap: 5%;
+            row-gap: 18px;
+            }
+
+        .carousel-item img {
+            height: 250px;
+        }
+    }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .item-anuncio {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 47%);
+            column-gap: 6%;
+            row-gap: 18px;
+        }
+
+        .carousel-item img {
+            height: 400px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+<div class="body-mask">
+    <header>     
+        <div class="text-center"
+        style="background-image: url('images/waterfall.jpg');
+        height: 300px;">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.5); height: 300px;">
+            <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1>Sixel Travels</h1>
+                <a class="btn btn-outline-light btn-lg" href="#destaques" type="button">
+                    Destaques
+                </a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    
+    <div id="carousel-projeto" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div data-bs-interval="5000" class="carousel-item active">
+                <img class="d-block w-100" src="images/praia.jpg" alt="Paisagem praiana">
+                <div class="carousel-caption">
+                    <h2>Praia</h2>
+                </div>
+            </div>
+            <div data-bs-interval="5000" class="carousel-item" >
+                <img class="d-block w-100" src="images/neve.jpg" alt="Cabana na neve">
+                <div class="carousel-caption">
+                    <h2>Neve</h2>
+                </div>
+            </div>
+            <div data-bs-interval="5000" class="carousel-item">
+                <img class="d-block w-100" src="images/montanha.jpg" alt="Foto de montanhas">
+                <div class="carousel-caption">
+                    <h2>Montanha</h2>
+                </div>
+            </div>
+        </div>
+        <button data-bs-target="#carousel-projeto" data-bs-slide="prev" class="carousel-control-prev" type="button">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button data-bs-target="#carousel-projeto" data-bs-slide="next" class="carousel-control-next" type="button">
+        <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+<div>
+<div class="container">
+    <section id="destaques">
+    <h1>Destaques</h1>
+    <div class="anuncios">
+        <ul class="item-anuncio">
+            <li>
+            <article class="card">
+            <header class="card-header bg-light">
+                América do Sul
+            </header>
+            <img src="images/bariloche.jpg" alt="">
+            <div class="card-body">
+            <h4 class="card-title">Bariloche</h4>
+            
+            <p class="card-text">
+                Conheça o principal destino turístico do continente para quem curte ou gostaria de conhecer a neve.               
+            </p>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+            <footer>
+                <div class="card-footer">
+                    Promoção válida até dezembro de 2022
+                </div>
+            </footer>
+        </article>
+        
+    </li>
+    <li>
+        <div>
+            <article class="card">
+            <header class="card-header">
+                EUA
+            </header>
+            <img src="images/disneyland.jpg" alt="">
+            <div class="card-body">
+            <h4 class="card-title">Disney/Orlando</h4>
+            
+            <p class="card-text">
+                Viaje com toda família para conhecer os parques de diversões mais famosos do mundo.                   
+            </p>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+            <footer>
+                <div class="card-footer">
+                    Promoção válida até dezembro de 2022
+                </div>
+            </footer>
+        </article>
+        </div>
+    </li>
+    <li>
+        <div>
+            <article class="card">
+            <header class="card-header">
+                Rio Grande do Sul
+            </header>
+            <img src="images/gramado.jpg" alt="">
+            <div class="card-body">
+            <h4 class="card-title">Gramado</h4>
+            
+            <p class="card-text">
+                A viagem perfeita para uma cidade cheia de tradições e com uma gastronomia muito diversificada para seus visitantes.                
+            </p>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+            <footer>
+                <div class="card-footer">
+                    Promoção válida até dezembro de 2022
+                </div>
+            </footer>
+        </article>
+        </div>
+    </li>
+    <li>
+        <div>
+            <article class="card">
+            <header class="card-header">
+                Nordeste brasileiro
+            </header>
+            <img src="images/noronha.jpg" alt="">
+            <div class="card-body">
+            <h4 class="card-title">Fernando de Noronha</h4>
+            
+            <p class="card-text">
+                O destino mais buscado por turistas de todo o mundo para visitar a região Nordeste do Brasil.               
+            </p>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+            <footer>
+                <div class="card-footer">
+                    Promoção válida até dezembro de 2022
+                </div>
+            </footer>
+        </article>
+        </div>
+    </li>
+    <li>
+        <div>
+            <article class="card">
+            <header class="card-header">
+                Rio de Janeiro
+            </header>
+            <img src="images/rio.jpg" alt="">
+            <div class="card-body">
+            <h4 class="card-title">Rio de janeiro</h4>
+            
+            <p class="card-text">
+                A cidade maravilhosa te espera com as mais belas praias e sua grande diversidade de atividades turísticas.                  
+            </p>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+            <footer>
+                <div class="card-footer">
+                    Promoção válida até dezembro de 2022
+                </div>
+            </footer>
+        </article>
+        </div>
+    </li>
+    <li>
+        <div>
+            <article class="card">
+            <header class="card-header">
+                Europa
+            </header>
+            <img src="images/paris.jpg" alt="">
+            <div class="card-body">
+            <h4 class="card-title">Paris</h4>
+            
+            <p class="card-text">
+                Viaje com conforto e segurança para a cidade que é considerada a mais linda e romântica do velho continente.               
+            </p>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+            <footer>
+                <div class="card-footer">
+                    Promoção válida até dezembro de 2022
+                </div>
+            </footer>
+        </article>
+        </div>
+    </li>
+    </ul>
+        </div>
+        
+    </section>
+</div>
+</div>
+<footer id="rodape">
+    <div class="container">
+        <p>
+            &copy; Sixel Travels - Todos os direitos reservados - 2022
+        </p>
+    </div>
+</footer>
+</div>
+    <script src="lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
